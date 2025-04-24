@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>年齡計算</h1>
+    <p>你的名字: {{name}}</p>
+    {% if age >= 18 %}
+        <p>你已經成年了！</p>
+    {% else %}
+        <p>你還未成年！</p>
+    {% endif %}
+    <p>你的年齡是 {{ age }} 歲</p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>成績評語</h1>
+    <p>你的分數是 {{ score }}</p>
+
+    {% if score >= 90 %}
+        <p>🌟 優秀！</p>
+    {% elif score >= 60 %}
+        <p>😊 及格，加油！</p>
+    {% else %}
+        <p>😢 不及格，再接再厲！</p>
+    {% endif %}
+
+</body>
+</html>
