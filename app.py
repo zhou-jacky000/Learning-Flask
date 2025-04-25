@@ -2,6 +2,11 @@ from flask import Flask,render_template
 
 app = Flask(__name__)
 
+app.config['debug'] = True
+app.config['SECRET_KEY'] =  '1234567890'
+app.config['env'] = 'development'
+app.config['TESTING'] = True    
+
 @app.route('/')
 def home():
     return render_template('index.html', name='Flask 學員')
