@@ -17,7 +17,11 @@ def age(name,value):
 
 @app.route('/fruits')
 def fruits():
-    fruit_list = ['🍎 蘋果', '🍌 香蕉', '🍇 葡萄']
+    fruit_list = [
+        {'name': '🍎 蘋果', 'price': 30},
+        {'name': '🍌 香蕉', 'price': 20},
+        {'name': '🍇 葡萄', 'price': 50}
+    ]
     return render_template('fruits.html', fruits=fruit_list)
 
 if __name__ == '__main__':
